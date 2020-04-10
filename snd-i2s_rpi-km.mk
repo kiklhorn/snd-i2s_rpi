@@ -1,8 +1,8 @@
-I2SRPI_FOLDER ?= kernel/sound/drivers/snd-i2c_rpi
+I2SRPI_FOLDER ?= kernel/sound/drivers/snd-i2s_rpi
 
 I2SRPI_MODULE:
 	make clean -C $(I2SRPI_FOLDER) KDIR=$(KERNEL_OUT)
-	make -j4 -C $(I2SRPI_FOLDER) ARCH=arm KDIR=$(KERNEL_OUT) \
+	make -C $(I2SRPI_FOLDER) ARCH=arm KDIR=$(KERNEL_OUT) \
 		$(if $(ARM_CROSS_COMPILE),$(ARM_CROSS_COMPILE),$(KERNEL_CROSS_COMPILE))
 	mv $(I2SRPI_FOLDER)/snd-i2s_rpi.ko $(KERNEL_MODULES_OUT)
 	$(if $(ARM_EABI_TOOLCHAIN),$(ARM_EABI_TOOLCHAIN)/arm-eabi-strip, \
