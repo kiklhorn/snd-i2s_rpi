@@ -1,3 +1,7 @@
+** Planed changes: 
+- combine with MAX 98357A (https://learn.adafruit.com/adafruit-max98357-i2s-class-d-mono-amp/raspberry-pi-usage) to simple card
+- change default platform to RPi 2, 3**
+
 **Driver for the SPH0645LM4H I2S MEMS Microphone**
 
 [Product learn page on Adafruit](https://learn.adafruit.com/adafruit-i2s-mems-microphone-breakout/overview).
